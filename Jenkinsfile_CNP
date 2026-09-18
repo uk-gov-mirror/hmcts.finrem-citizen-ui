@@ -84,8 +84,7 @@ withPipeline(type, product, component) {
 
   onPR() {
     // Optional: set backend PR number to run frontend CI against backend PR CCD stack.
-    // CCD_DEFINITIONS_PR=1234 -> ccd-data-store-api-finrem-ccd-definitions-pr-1234.preview.platform.hmcts.net
-
+    env.CCD_DEFINITIONS_PR="3532"
     env.JENKINS_BRANCH = "preview"
     env.RUNNING_ENV = "pr-${CHANGE_ID}"
     env.TEST_URL = "https://finrem-citizen-ui-pr-${CHANGE_ID}.preview.platform.hmcts.net"
